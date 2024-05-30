@@ -1,6 +1,7 @@
 .banner{
     background-color: #6278f7;
     text-align: center;
+    background-image: url("../../../public/image/fundo.png");
 }
 
 .banner img{

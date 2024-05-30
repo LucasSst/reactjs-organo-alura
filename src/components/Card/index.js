@@ -9,7 +9,10 @@ const Card = ({name, resume, url, backgroundColorPrimary}) => {
             </div>
             <div className="footer">
                 <h4>{name}</h4>
-                <h5>{resume}</h5>
+                <div className="footer_text">
+                    <h5>Resumo</h5>
+                    <p>{resume}</p>
+                </div>
             </div>
         </div>
     )

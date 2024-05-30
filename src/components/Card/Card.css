@@ -11,14 +11,14 @@
     border-radius: 50%;
     position: relative;
     bottom: -50px;
-    min-height: 200px;
+    min-height: 100%;
 }
 
 .card .footer {
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
-    padding-top: 90px;
+    padding-top: 70px;
     padding-bottom: 40px;
 }
 
@@ -30,9 +30,16 @@
     margin-bottom: 8px;
 }
 
+
 .card .footer h5 {
     font-size: 18px;
     line-height: 22px;
     color: #212121;
     padding: 0 16px;
+    margin: 15px 0 10px 0;
+}
+
+.card .footer .footer_text p{
+    margin: 5px;
+    padding: 0 10px;
 }
