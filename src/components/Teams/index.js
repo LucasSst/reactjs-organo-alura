@@ -10,7 +10,7 @@ const Teams = (props) => {
         props.data.length > 0 && <section className="team" style={css}>
             <h3 style={{borderColor: props.colorPrimary}}>{props.name}</h3>
             <div className="data">
-                {data.map(v => <Card key={v.name} backgroundColorPrimary={colorPrimary} name={v.name} office={v.office} url={v.url} />)}
+                {data.map(v => <Card key={v.name} backgroundColorPrimary={colorPrimary} name={v.name} resume={v.resume} url={v.url} />)}
             </div>
         </section>
     )

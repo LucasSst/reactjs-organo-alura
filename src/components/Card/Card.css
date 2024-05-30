@@ -1,5 +1,5 @@
 .card {
-    width: 280px;
+    width: 380px;
 }
 
 .card .header {
@@ -7,10 +7,11 @@
     border-radius: 10px 10px 0px 0px;
 }
 .card img {
-    width: 100px;
+    width: 200px;
     border-radius: 50%;
     position: relative;
     bottom: -50px;
+    min-height: 200px;
 }
 
 .card .footer {

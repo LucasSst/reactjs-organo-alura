@@ -3,49 +3,52 @@ import TextField from "../TextField";
 import DropdownList from "../DropdownList";
 import Button from "../Button";
 import { useState } from "react";
+import TextArea from "../TextArea";
 const Form = (props) => {
     const [name, setName] = useState("");
-    const [office, setOffice] = useState("");
+    const [resume, setResume] = useState("");
     const [url, setUrl] = useState("");
-    const [teams, setTeams] = useState("");
+    const [genre, setGenres] = useState("");
+
     const toTheSave = (event) => {
         event.preventDefault()
         props.registeredData({
             name, 
-            office, 
+            resume, 
             url,
-            teams
+            genre
         });
-
         setName("");
-        setOffice("");
+        setResume("");
         setUrl("");
-        setTeams("");
+        setGenres("");
     }
 
 
     return (
         <section className="form">
             <form onSubmit={toTheSave}>
-            <h2>Preencha os dados para criar o card do colaborador!</h2>
-                <TextField required={true} label={"Nome"} placeholder={"Digite o seu nome"} 
+            <h2>Informe os dados da filme ou série assistida!</h2>
+                <TextField required={true} label={"Nome"} placeholder={"Nome da série: "} 
                     changed={value => setName(value)}
                     value={name}
                 />
-                <TextField required={true} label={"Cargo"} placeholder={"Digite o seu cargo"} 
-                    changed={value => setOffice(value)}
-                    value={office}
+                <TextArea required={true} label={"Resumo"} placeholder="Digite o resumo"
+                    changed={ value => setResume(value)}
+                    value={resume}
+                    min={10}
+                    max={55}
                 />
                 <TextField label={"Imagem"} placeholder={"Digite o endereço da imagem"} 
                     changed={value => setUrl(value)}
                     value={url}
                 />
-                <DropdownList required={true} label={"Time"} items={props.teams}
-                changed={value => setTeams(value)}
-                    value={teams}
+                <DropdownList required={true} label={"Categoria"} items={props.genresItems}
+                changed={value => setGenres(value)}
+                value={genre}
                 />
                 <Button>
-                    Criar Card
+                    Criar Cartaz
                 </Button>
             </form>
         </section>
