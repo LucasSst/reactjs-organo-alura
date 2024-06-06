@@ -1,0 +1,36 @@
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+    
+}
+
+.section button{
+    position: absolute;
+    right: 10%;
+}
+
+
+.section h2{
+    color: rgb(146, 30, 255);
+    font-size: 32px;
+    border-bottom: 4px solid  rgb(146, 30, 255); 
+    border-width: 30%;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+
+@media screen and (max-width:680px) {
+    .section {
+       flex-direction: column;
+        
+    }
+
+    .section button{
+        position: relative;
+        right: 0;
+    }
+}

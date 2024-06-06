@@ -3,6 +3,7 @@ import Banner from "./components/Banner"
 import Form from './components/Form';
 import { useState } from 'react';
 import Teams from './components/Teams';
+import Section from './components/Section';
 function App() {
   const [ data, setData ] = useState([]);
   const genresArray = [
@@ -38,11 +39,20 @@ function App() {
     
   }
 
+  const [form, setForm] = useState(<Form genresItems={genresArray.map((v) => v.name)} registeredData={(value) => newDataAddition(value)} />)
+
+  function closeAndOpenForm() {
+    if (!form) {
+      setForm(<Form genresItems={genresArray.map((v) => v.name)} registeredData={(value) => newDataAddition(value)} />)
+    }else {
+      setForm("")
+    }
+  }
   return (
     <div className="App">
       <Banner />
-      <Form genresItems={genresArray.map((v) => v.name)} registeredData={(value) => newDataAddition(value)} />
-
+      {form}
+      <Section closeAndOpenForm={closeAndOpenForm} />
       {genresArray.map((genre) => 
         <Teams 
           key={genre.name} 

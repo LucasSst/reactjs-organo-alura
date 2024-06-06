@@ -24,9 +24,8 @@ const Form = (props) => {
         setGenres("");
     }
 
-
     return (
-        <section className="form">
+        <section className={`form`}>
             <form onSubmit={toTheSave}>
             <h2>Informe os dados da filme ou série assistida!</h2>
                 <TextField required={true} label={"Nome"} placeholder={"Nome da série ou filme: "} 
